@@ -1,3 +1,8 @@
 {% extends 'base.html' %}
+{%block style%}     <link rel="stylesheet" href="{{url_for('static',filename='css/adminFeedback.css')}}">
+ {%endblock%}
 {% block title %} Feedbacks {% endblock %}
-{% block content %}<h2> Admin Feedback Content here</h2>{% endblock %}
+{% block content %}<h2> Feedback Data </h2>
+<p>Total Feedback Submissions : {{feedback_count}}</p>
+{{ table|safe }}
+{% endblock %}
